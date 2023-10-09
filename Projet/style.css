@@ -1,9 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&family=Roboto:wght@300;400;500;700&family=Rubik:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Croissant+One&family=Montserrat:wght@300;400;500&display=swap');
 
 html {
     font-family: 'Rubik', sans-serif;
     overflow-x: hidden;
-    background: grey;
 }
 
 :root {
@@ -14,13 +14,14 @@ html {
 
 .bg-main-image {
     position: fixed;
+    top: 0;
     filter: var(--bg-blur);
     filter: var(--bg-brightness);
     height: 100%;
     width: 100%;
-
+    background-size: cover;
+    z-index: -1;
     margin-left: -8px;
-    margin-top: 10px;
 }
 
 div[class="container"] {
@@ -31,6 +32,7 @@ div[class="container"] {
 /* ----- Grid du header ----- */
 
 .header {
+    text-align: center;
     align-items: center;
     display: grid;
     grid-template-columns: repeat(5, 1fr);
@@ -38,32 +40,25 @@ div[class="container"] {
     grid-row-gap: 0px;
 }
 
+header .a1 {
+    text-decoration: none;
+    color: #fff;
+}
+
+header .a2 {
+    text-decoration: none;
+    color: #fff;
+}
+
 .div1 {
-    grid-area: 1 / 1 / 2 / 2; 
     background-color: #fff;
-    text-align: center;
-}
-
-.div2 { 
-    grid-area: 1 / 1 / 2 / 4; 
-    text-align: center;
-}
-
-.div3 { 
-    grid-area: 1 / 2 / 2 / 5; 
-    text-align: center;
-}
-
-.div4 { 
-    grid-area: 1 / 3 / 2 / 6;
     text-align: center;
 }
 
 .div5 {
-    grid-area: 1 / 5 / 2 / 7;
-    text-align: center;
-    background-color: #fff;
-    color: #000;
+    background-color: #000000;
+    color: #ffffff;
+
 }
 
 /* ----- Fin du grid pour l'header ----- */
@@ -72,6 +67,7 @@ header {
     background-color: #000;
     color: #fff;
     margin: -10px;
+    position: sticky;
 }
 
 /* ----- "Boutons" du header ----- */
@@ -80,9 +76,6 @@ header .header-section {
     align-items: center;
 }
 
-header {
-    position: sticky;
-}
 
 header a {
     font-weight: 600;
@@ -90,8 +83,69 @@ header a {
 
 /* ----- Avis ----- */
 
+ 
+.ranking-stars{
+    padding-top: 10px;
+}
+
+.all-cards{
+    display: flex;
+}
+.card {
+    width: 300px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    background-color: rgb(60, 60, 60);
+    color: white;
+    margin: 100px;
+    font-family: Arial, sans-serif;
+    justify-content: center;
+    align-items: center;
+    height: 89;
+}
+  
+.card .card-header img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+.card .card-content {
+    padding: 20px;
+}
+  
+.card .card-content h2 {
+    margin: 0 0 10px;
+}
+  
+.card .card-content p {
+    margin: 0;
+}
+  
+.card .card-footer {
+    padding: 10px 20px;
+    display: flex;
+    justify-content: flex-end;
+}
+  
+.card .card-footer .btn {
+    padding: 10px 20px;
+    background-color: #72383D;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+  
+.card .card-footer .btn:hover {
+    background-color: #42282a;
+}
 
 /* ----- La classe de l'image ----- */
+
 .img-avis {
     display: flex;
     width: 150px;
@@ -99,6 +153,7 @@ header a {
 }
 
 /* ----- La classe de la div de l'image ----- */
+
 .avis-img {
     display: flex;
     margin-top: 100px;
@@ -107,40 +162,152 @@ header a {
     border-radius: 5vmax;
 }
 
-/* ----- Formulaire ----- */
+/* ---- galerie photo hugo ---- */
 
-.formulaire {
+
+/* ---- fin galerie photo hugo ---- */
+
+
+/* ---- formulaire hugo ---- */
+
+.reservation-container {
+    display: flex;
+    max-width: 1000px;
+    width: 80%;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     justify-content: center;
     align-items: center;
-    border: 3px solid #000;
-    border-radius: 10px;
-    margin-top: 80px;
-    margin-right: 350px;
-    margin-left: 350px;
-    background-color: #fff;
+    margin-left: 250px;
+}
+
+.image-container {
+    flex: 1;
+    max-width: 300px;
+    overflow: hidden;
+    padding: 35px;
+}
+
+.image-container img {
+    width: 300px;
+    height: 180px;
+}
+
+.reservation-form {
+    padding: 20px;
+    max-width: 500px;
+    width: 100%;
+    text-align: center;
+    padding-top: 35px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    font-weight: bold;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
 }
 
 .form-btn {
-    padding: 3px;
-    margin-top: 15px;
+    background-color: #72383D;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px;
 }
 
-.formulaire input {
-    margin-top: 25px;
+.form-btn:hover {
+    background-color: #42282a;
 }
 
-.bg-main_img {
-    z-index: -1;
+/* ----- fin formulaire hugo ----- */
+
+/* ----- Espace du menu ----- */
+
+.menu-container {
+    display: inline-block;
+    background-color: #000;
+    border: 2px solid #fff;
+    color: #fff;
+    border-radius: 25px;
+    margin-top: 50px;
+    padding: 50px;
+    margin-left: 450px;
 }
 
-.background-img {
-    /*of course with this solution you should remove the previous background image*/
-    position: fixed;
-    top: 0;
-    height: 100vh;
-    width: 100vw;
-    background-image: url(https://i.pinimg.com/736x/2a/a1/da/2aa1da060c0dfad146354e0cc06560c2.jpg);
-    background-size: cover;
-    /* Without z-index the background seems to cover the content*/
-    z-index: -1;
+.menu-img img{
+    width: 350px;
+    height: 250px;
+}
+
+/* ----- Fin du menu ----- */
+
+.form-title {
+    text-align: center;
+    color: #fff;
+    font-family: 'Croissant One';
+    margin-top: 20px;
+}
+
+.image1{
+    width: 600px;
+    padding: 40px;
+}
+
+.galerie {
+    display: flex;
+    justify-content: center;
+}
+
+.pictures-title {
+    text-align: center;
+    color: #fff;
+    font-family: 'Croissant One';
+    margin-top: 60px;
+}
+
+
+footer {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+footer div {
+    flex: 1;
+    margin: 10px;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+h2 {
+    margin-bottom: 10px;
+}
+
+p {
+    margin-bottom: 8px;
+}
+
+a {
+    text-decoration: none;
+    color: #007bff;
+}
+
+a:hover {
+    text-decoration: underline;
 }

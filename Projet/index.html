@@ -6,68 +6,167 @@
     <link rel="stylesheet" href="/Projet/style.css">
     <title>Projet CSS Avancé</title>
 </head>
-
 <body>
     <!-- Header -->
     <header>
         <div class="header">
             <div class="div1">
-                <img src="./ressources/logo.jpg" alt="logo">
+                <img src="/Projet/ressources/logoquimarche.jpg" alt="logo">
             </div>
             <div class="div2">
-                <a>Carte</a>
+                <a class="a1" href="#carte">Carte</a>
             </div>
             <div class="div3">
-                <a>Témoignages</a>
+                <a class="a1" href="#avis">Avis</a>
             </div>
             <div class="div4">
-                <a>Réserver</a>
+                <a class="a1" href="#reserver">Réserver</a>
             </div>
             <div class="div5">
-                <h1></h1>
+                <a class="a2" href="#contact">Contact</a>
             </div>
         </div>
     </header>
-    <!-- Image du Background -->
-    <div class="bg-main-image">
+
+    <img src="/Projet/ressources/cover_dark.jpg" alt="bg" class="bg-main-image">
+
+    <!-- Zone Menu -->
+
+    <div class="menu-container">
+        <div class="menu-title">
+            <h1>Truc à la viande avec des légumes</h1>
+        </div>
+        <div class="menu-img">
+            <img src="/Projet/ressources/food_1_dark.jpg" alt="dishes">  
+        </div>
+        <p>Miam miam la nourriture.</p>
     </div>
-    
-    
-    
-
-
 
     <!-- Zone Témoignage -->
 
-    
+    <div class="all-cards" id="avis">
+        <div class="card">
+            <div class="card-header">
+                <img src="/Projet/ressources/testimonial_1_dark.jpg" alt="Image de la carte">
+            </div>
+            <div class="card-content">
+                <h2>Veronica Gonzillia</h2>
+                <h3>Un délice pour les papilles !</h3>
+                <p>Le service était excellent, le personnel était attentif et sympathique. Ils étaient également très compétents et ont su recommander des plats en fonction de nos préférences.</p>
+                <p class="ranking-stars">⭐⭐⭐⭐⭐</p>
+            </div>          
+            <div class="card-footer">
+                <button class="btn">Lire la suite</button>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-header">
+                <img src="/Projet/ressources/testimonial_2_dark.jpg" alt="Image de la carte">
+            </div>
+            <div class="card-content">
+                <h2>Lucie Sauteuse</h2>
+                <h3>Incroyable !</h3>
+                <p>J'ai récemment dîné au restaurant Bon Appétit et c'était une expérience culinaire incroyable. L'ambiance était chaleureuse et accueillante, parfaite pour un repas en famille ou entre amis.</p>
+                <p class="ranking-stars">⭐⭐⭐⭐⭐ </p>
+            </div>          
+            <div class="card-footer">
+                <button class="btn">Lire la suite</button>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-header">
+                <img src="/Projet/ressources/testimonial_3_dark.jpg" alt="Image de la carte">
+            </div>
+            <div class="card-content">
+                <h2>Caro Lean</h2>
+                <h3>Un Menu vraiment complet !</h3>
+                <p>La diversité du menu était impressionnante. J'ai opté pour le plat du jour, un délicieux plat de poisson frais, et c'était tout simplement délicieux. Les saveurs étaient parfaitement équilibrées.</p>
+                <p class="ranking-stars">⭐⭐⭐⭐⭐</p>
+            </div>          
+            <div class="card-footer">
+                <button class="btn">Lire la suite</button>
+            </div>
+        </div>
+    </div>
 
 
 
+    <h1 class="form-title">Réservation</h1>
     <!-- Formulaire réservation (nom/heure/nbr prs) -->
 
-    <form action="reservation">
-        <div class="formulaire">
-            <ul>
-                <h2>Formulaire de réservation</h2>
-                <input type="text" id="name" placeholder="Nom :">
-                <br>    
-                <label for="number-of-person"></label>
-                <input type="number" id="number-of-person" placeholder="Nombre de personne :">
-                <br>
-                <label for="hour">Heure de réservation :</label>
-                <input type="time" id="hour" placeholder="">
-
-                <div>
-                    <button class="form-btn" type="submit">Réserver</button>
-                    <p class="form-p">*merci de laisser les animaux ainsi que Léo Le Leu à l'entrée.</p>
-                </div>
-            </ul>
+    <div class="reservation-container">
+        <div class="image-container">
+            <img src="./ressources/makereservation_dark.jpg" alt="Background">
         </div>
-    </form>
-    
+        <div class="reservation-form" id="reserver">
+            <form>
+                <div class="form-group">
+                    <label for="name">Nom :</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="guests">Nombre de Personnes :</label>
+                    <input type="number" id="guests" name="guests" min="1" required>
+                </div>
+                <div class="form-group">
+                    <label for="datetime">Date/Heure :</label>
+                    <input type="datetime-local" id="datetime" name="datetime" required>
+                </div>
+                <button class="form-btn" type="submit">Réserver</button>
+            </form>
+        </div>
+    </div>
+
+
+
+    <h1 class="pictures-title">Galerie Photos</h1>
+    <div class="galerie">
+        <img class="image1" src="./ressources/food_2_dark.jpg">
+        <img class="image1" src="./ressources/food_3_dark.jpg">
+    </div>
+    <div class="galerie">
+        <img class="image1" src="./ressources/food_8_dark.jpg">
+        <img class="image1" src="./ressources/food_6_dark.jpg">
+    </div>
+    <div class="galerie">
+        <img class="image1" src="./ressources/event_3_dark.jpg">
+        <img class="image1" src="./ressources/food_12_dark.jpg">
+    </div>
+
     <!-- Footer -->
     <footer>
+        <div id="contact">
+            <h2>Contact</h2>
+            <p>Adresse : 123 Rue de la haha, Wappy, France</p>
+            <p>Téléphone : +33 2 35 67 89 98</p>
+            <p>Email : bon.appetit@notrerestaurant.fr</p>
+        </div>
 
+        <div id="adresse">
+            <h2>Adresse</h2>
+            <p>123 Rue de la haha</p>
+            <p>Wappy, France</p>
+        </div>
+
+        <div id="horaires">
+            <h2>Horaires d'Ouverture</h2>
+            <p>Lundi - Vendredi : 11h00 - 22h00</p>
+            <p>Samedi - Dimanche : 12h00 - 23h00</p>
+        </div>
+
+        <div id="reseaux-sociaux">
+            <h2>Réseaux Sociaux</h2>
+            <p>Facebook: <a href="https://facebook.com/notreres" target="_blank">Bon appétit de Bouillon</a></p>
+            <p>Twitter: <a href="https://twitter.com/notreres" target="_blank">Bon appétit Wappy</a></p>
+            <p>Instagram: <a href="https://instagram.com/notreres" target="_blank">Bon_appétit_Wappy</a></p>
+        </div>
+
+        <div id="Credits">
+            <p>Crédits</p>
+            <p>Mentions Légales : <a href="mentions-legales.html">Mentions Légales</a></p>
+        </div>
     </footer>
 </body>
 </html>

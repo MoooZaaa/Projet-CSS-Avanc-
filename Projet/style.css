@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&family=Roboto:wght@300;400;500;700&family=Rubik:wght@300;400;500;600;700&display=swap');
+
+html {
+    font-family: 'Rubik', sans-serif;
+    overflow-x: hidden;
+    background: grey;
+}
+
+:root {
+    --bg-blur: blur(3px);
+    --bg-brightness: brightness(0.4); 
+    --bg-main: #3498db;
+}
+
+.bg-main-image {
+    position: fixed;
+    filter: var(--bg-blur);
+    filter: var(--bg-brightness);
+    height: 100%;
+    width: 100%;
+
+    margin-left: -8px;
+    margin-top: 10px;
+}
+
+div[class="container"] {
+    display: flexbox;
+    border: none;
+}
+
+/* ----- Grid du header ----- */
+
+.header {
+    align-items: center;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+}
+
+.div1 {
+    grid-area: 1 / 1 / 2 / 2; 
+    background-color: #fff;
+    text-align: center;
+}
+
+.div2 { 
+    grid-area: 1 / 1 / 2 / 4; 
+    text-align: center;
+}
+
+.div3 { 
+    grid-area: 1 / 2 / 2 / 5; 
+    text-align: center;
+}
+
+.div4 { 
+    grid-area: 1 / 3 / 2 / 6;
+    text-align: center;
+}
+
+.div5 {
+    grid-area: 1 / 5 / 2 / 7;
+    text-align: center;
+    background-color: #fff;
+    color: #000;
+}
+
+/* ----- Fin du grid pour l'header ----- */
+
+header {
+    background-color: #000;
+    color: #fff;
+    margin: -10px;
+}
+
+/* ----- "Boutons" du header ----- */
+
+header .header-section {
+    align-items: center;
+}
+
+header {
+    position: sticky;
+}
+
+header a {
+    font-weight: 600;
+}
+
+/* ----- Avis ----- */
+
+
+/* ----- La classe de l'image ----- */
+.img-avis {
+    display: flex;
+    width: 150px;
+    height: 150px;
+}
+
+/* ----- La classe de la div de l'image ----- */
+.avis-img {
+    display: flex;
+    margin-top: 100px;
+    margin-left: 75px;
+    border: 15px solid white;
+    border-radius: 5vmax;
+}
+
+/* ----- Formulaire ----- */
+
+.formulaire {
+    justify-content: center;
+    align-items: center;
+    border: 3px solid #000;
+    border-radius: 10px;
+    margin-top: 80px;
+    margin-right: 350px;
+    margin-left: 350px;
+    background-color: #fff;
+}
+
+.form-btn {
+    padding: 3px;
+    margin-top: 15px;
+}
+
+.formulaire input {
+    margin-top: 25px;
+}
+
+.bg-main_img {
+    z-index: -1;
+}
+
+.background-img {
+    /*of course with this solution you should remove the previous background image*/
+    position: fixed;
+    top: 0;
+    height: 100vh;
+    width: 100vw;
+    background-image: url(https://i.pinimg.com/736x/2a/a1/da/2aa1da060c0dfad146354e0cc06560c2.jpg);
+    background-size: cover;
+    /* Without z-index the background seems to cover the content*/
+    z-index: -1;
+}
